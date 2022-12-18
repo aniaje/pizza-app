@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title><HTML 5 Boilerplate></title>
+      <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <p class="title">Here is a pizza dough making time calculator. Exclusively for Vito Iacopelli's amazing recipe! Find out when you should start, to have your pizza ready at given time.  </p>
+    <a href="https://www.youtube.com/watch?v=OjsCEJ8CWlg&ab_channel=ProHomeCooks">the recipe &#8250;</a>
+    <h1 for="pizza-time">Choose your <span>pizza</span> time:</h1>
+    <div class="date-picker">
+
+      <form id="form">
+        
+  
+        <input  type="datetime-local" id="pizza-time" name="pizza-time" required  oninvalid="this.setCustomValidity('pick the date!')"
+        oninput="this.setCustomValidity('')" />
+    
+        <button type="submit">when do I start?</button>
+        <p class="date-results">
+
+         <div class="date-result" id="display-step1"></div>
+         <div class="date-result" id="display-step2"></div>
+         <div class="date-result" id="display-step3"></div>
+         <div class="date-result" id="display-step4"></div>
+        </p>
+        <img src="f30.png">
+ 
+      </form>
+     
+    </div>
+
+<div class="auth-link" >
+    <span >created with <i class="fa-solid fa-pizza-slice"></i> by <a >anaweb</a></span></div>
+    
+    <script src="https://kit.fontawesome.com/f6b2766751.js" crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+  </body>
+</html>
