@@ -1,3 +1,8 @@
+const datePicker = document.querySelector("#pizza-time");
+const warning = document.getElementsByClassName("warning");
+const img = document.querySelector("img");
+const button = document.querySelector("button");
+
 function toDateTime(date) {
   let str = "";
   let month, day, hour, min;
@@ -15,9 +20,7 @@ function toDateTime(date) {
   str += " " + hour + ":" + min;
   return str;
 }
-const datePicker = document.querySelector("#pizza-time");
-const warning = document.getElementsByClassName("warning");
-const img = document.querySelector("img");
+
 document.getElementById("form").addEventListener("submit", function (e) {
   e.preventDefault();
   img.classList.add("hidden");
@@ -30,10 +33,10 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
   let date = new Date(pizzaTime);
 
-  let step1 = new Date(new Date(pizzaTime).getTime() - 25 * 60 * 60 * 1000);
-  let step2 = new Date(new Date(pizzaTime).getTime() - 3 * 30 * 60 * 1000);
-  let step3 = new Date(new Date(pizzaTime).getTime() - 2 * 30 * 60 * 1000);
-  let step4 = new Date(new Date(pizzaTime).getTime() - 1 * 60 * 60 * 1000);
+  let step1 = new Date(date.getTime() - 25 * 60 * 60 * 1000);
+  let step2 = new Date(date.getTime() - 3 * 30 * 60 * 1000);
+  let step3 = new Date(date.getTime() - 2 * 30 * 60 * 1000);
+  let step4 = new Date(date.getTime() - 1 * 60 * 60 * 1000);
 
   displayStep1.innerHTML = `${toDateTime(
     step1
@@ -41,7 +44,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
   displayStep2.innerHTML = `${toDateTime(
     step2
-  )} <span> the the polish put of the fridge and wait  </span>`;
+  )} <span> polish put in room temp </span>`;
 
   displayStep3.innerHTML = `${toDateTime(
     step3
@@ -49,8 +52,6 @@ document.getElementById("form").addEventListener("submit", function (e) {
 
   displayStep4.innerHTML = `${toDateTime(step4)} let the formed balls rest`;
 });
-
-const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
   button.classList.toggle("darkBtn");
