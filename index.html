@@ -5,39 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title><HTML 5 Boilerplate></title>
-      <link rel="stylesheet" href="styles.css">
+    <title>Pizza Time Calculator Vito Iacopelli's recipe</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <p class="title">Here is a pizza dough making time calculator. Exclusively for Vito Iacopelli's amazing recipe! Find out when you should start, to have your pizza ready at given time.  </p>
-    <a href="https://www.youtube.com/watch?v=OjsCEJ8CWlg&ab_channel=ProHomeCooks">the recipe &#8250;</a>
-    <h1 for="pizza-time">Choose your <span>pizza</span> time:</h1>
-    <div class="date-picker">
-
+    <header>
+      <p class="title">
+        Here is a pizza dough making time calculator. Exclusively for Vito
+        Iacopelli's amazing recipe! Find out when you should start, to have your
+        pizza ready at given time.
+      </p>
+      <a
+        target="_blank"
+        href="https://www.youtube.com/watch?v=OjsCEJ8CWlg&ab_channel=ProHomeCooks"
+        >the recipe &#8250;</a
+      >
+      <h1 for="pizza-time">Choose your <span>pizza</span> time:</h1>
+    </header>
+    <section class="date-picker">
       <form id="form">
-        
-  
-        <input  type="datetime-local" id="pizza-time" name="pizza-time" required  oninvalid="this.setCustomValidity('pick the date!')"
-        oninput="this.setCustomValidity('')" />
-    
+        <input
+          type="datetime-local"
+          id="pizza-time"
+          name="pizza-time"
+          required
+          oninvalid="this.setCustomValidity('pick the date!')"
+          oninput="this.setCustomValidity('')"
+        />
+
         <button type="submit">when do I start?</button>
-        <p class="date-results">
-
-         <div class="date-result" id="display-step1"></div>
-         <div class="date-result" id="display-step2"></div>
-         <div class="date-result" id="display-step3"></div>
-         <div class="date-result" id="display-step4"></div>
-        </p>
-        <img src="f30.png">
- 
+        <div class="display-steps" id="display-steps"></div>
+        <img src="f30.png" />
       </form>
-     
-    </div>
+    </section>
 
-<div class="auth-link" >
-    <span >created with <i class="fa-solid fa-pizza-slice"></i> by <a >anaweb</a></span></div>
-    
-    <script src="https://kit.fontawesome.com/f6b2766751.js" crossorigin="anonymous"></script>
+    <footer class="auth-link">
+      <span
+        >created with <i class="fa-solid fa-pizza-slice"></i> by
+        <a>anaweb</a></span
+      >
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/f6b2766751.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js.js"></script>
   </body>
 </html>
